@@ -1,17 +1,25 @@
-import { Header } from "./components/UI/Header/Header";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LoginPage } from "./pages/LoginPage/LoginPage";
+import { MainPage } from "./pages/MainPage/MainPage";
+import { ProfilePage } from "./pages/ProfilePage/ProfilePage";
 
 function App() {
   return (
     <>
       <div className="App">
-        <Header />
         <div className="container">
-          <LoginPage />
+          <BrowserRouter>
+            <Routes>
+              <Route element={<LoginPage />} path="/" />
+              <Route element={<MainPage />} path="/main-page" />
+              <Route element={<ProfilePage />} path="/profile-page" />
+            </Routes>
+          </BrowserRouter>
         </div>
       </div>
     </>
   );
 }
+
 
 export default App;

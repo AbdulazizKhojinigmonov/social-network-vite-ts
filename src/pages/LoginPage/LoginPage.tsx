@@ -1,35 +1,20 @@
+import { AppButton } from "../../components/AppButton/AppButton";
+import { AppInPut } from "../../components/AppInPut/AppInPut";
+import { Heading } from "../../components/Heading/Heading";
+import { RegistrationInfo } from "../../components/Registration/RegistrationInfo";
 import "./LoginPage.scss";
 
 export const LoginPage = () => {
   return (
     <div className="LoginPage">
-      <h1>Авторизация</h1>
+      <Heading headingText="Авторизация" headingType="h1" />
       <form action="#">
-        <input type="tel" placeholder="Номер телефона" />
-        <input type="password" placeholder="Пароль" />
-        <button>Войти</button>
+        <AppInPut type="tel" placeholder="Номер телефона" inputValue="" inputChange={() => {}} /> 
+        <AppInPut type="password" placeholder="Пароль" inputValue="" inputChange={() => {}} />
+        <AppButton buttonText="Войти" isDisabled={false} buttonClick={() => {}} />  
       </form>
       <a href="#">Забыли пароль?</a>
-      <div className="registration">
-        <span>
-          У вас нет аккаунта? <a href="#">Зарегистрироваться</a>
-        </span>
-        <p>Войти с помощью</p>
-        <div className="icons-wrapper">
-          <a className="reg__link google-link" href="#">
-            <img src="./img/icons/google.svg" alt="Google" />
-          </a>
-          <a className="reg__link google-plus-link" href="#">
-            <img src="./img/icons/google-plus.svg" alt="Google Plus" />
-          </a>
-          <a className="reg__link yandex-link" href="#">
-            <img src="./img/icons/yandex.svg" alt="Yandex" />
-          </a>
-          <a className="reg__link mail-ru-link" href="#">
-            <img src="./img/icons/mail-ru.svg" alt="Mail.ru" />
-          </a>
-        </div>
-      </div>
+      <RegistrationInfo path="#" />
     </div>
   );
 };
