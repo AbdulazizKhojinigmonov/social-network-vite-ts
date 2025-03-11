@@ -1,13 +1,15 @@
  import { Link } from "react-router-dom";
+import { SRegistrationInfo } from "./Registration.style";
  
  interface IRegistrationInfoProps {
     path: string;
+    
  }
 
  export const RegistrationInfo = ({path}: IRegistrationInfoProps ) => {
     return (
-
-        <div className="registration">
+        
+        <SRegistrationInfo>
         <span>
           У вас нет аккаунта? <Link to={path}>Зарегистрироваться</Link>
         </span>
@@ -26,6 +28,6 @@
             <img src="./img/icons/mail-ru.svg" alt="Mail.ru" />
           </a>
         </div>
-      </div>
+     </SRegistrationInfo>
     )
 }
