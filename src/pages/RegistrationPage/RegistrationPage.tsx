@@ -10,9 +10,9 @@ export const RegistrationPage = () => {
     <SRegistrationInfo>
       <Heading headingText="Регистрация" headingType="h1" />
       <form action="#">
-        <AppInPut type="tel" placeholder="Имя" inputValue="" inputChange={() => {}} isError={false} />
-        <AppInPut type="tel" placeholder="Номер телефона" inputValue="" inputChange={() => {}} isError={false} />
-        <AppInPut type="password" placeholder="Пароль" inputValue="" inputChange={() => {}} isError={false} />
+        <AppInPut type="tel" placeholder="Имя" inputValue="" userEmail="" inputChange={() => {}} isError={false} />
+        <AppInPut type="tel" placeholder="Номер телефона" inputValue="" userEmail="" inputChange={() => {}} isError={false} />
+        <AppInPut type="password" placeholder="Пароль" inputValue="" userEmail="" inputChange={() => {}} isError={false} />
         <AppButton buttonText="Зарегистрироваться" isDisabled={false} buttonClick={() => {}} />
       </form>
       
